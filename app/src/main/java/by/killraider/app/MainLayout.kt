@@ -69,7 +69,7 @@ fun MainLayout() {
             startDestination = Screen.Home.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(Screen.Home.route) {MainScreen(Screen.Home)}
+            composable(Screen.Home.route) {HomeScreen(onHeaderClick = {})}
             composable(Screen.Workout.route) {MainScreen(Screen.Workout)}
             composable(Screen.Book.route) {MainScreen(Screen.Book)}
             composable(Screen.Stats.route) {MainScreen(Screen.Stats)}
