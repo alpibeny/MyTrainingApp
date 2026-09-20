@@ -1,5 +1,6 @@
 package by.killraider.app
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -7,12 +8,15 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.foundation.layout.padding
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 
 @Composable
 fun MainLayout() {
@@ -22,7 +26,7 @@ fun MainLayout() {
     Scaffold(
         bottomBar = {
             NavigationBar(
-                containterColor = Color(0xFF030712),
+                containerColor = Color(0xFF030712),
                 contentColor = Color(0xFF3B82F6)
             ) {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -63,7 +67,8 @@ fun MainLayout() {
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = Screen.Home.route
+            startDestination = Screen.Home.route,
+            modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {MainScreen(Screen.Home)}
             composable(Screen.Workout.route) {MainScreen(Screen.Workout)}
