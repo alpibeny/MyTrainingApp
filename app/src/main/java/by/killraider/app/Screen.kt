@@ -36,7 +36,7 @@ sealed class Screen ( val route: String,
         route = "stats",
         title = "Статистика",
         iconId = R.drawable.menu_rank,
-        activeIconId = R.drawable.menu_book_active,
+        activeIconId = R.drawable.menu_rank_active,
         backgroundColor = Color(0xFF581C87)
     )
 

@@ -14,7 +14,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import androidx.compose.foundation.layout.padding
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
